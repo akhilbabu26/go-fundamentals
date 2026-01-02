@@ -10,7 +10,7 @@ func main(){
 	fmt.Println("SUB:",calculator.Sub(5,56))
 	fmt.Println("MUL:",calculator.Mul(5,56))
 
-	result, err := calculator.Div(5,2)
+	result, err := calculator.Div(5,0)
 	if err != nil{
 		fmt.Println("ERROR:", err)
 	}else{
