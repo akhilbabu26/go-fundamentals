@@ -12,6 +12,6 @@ func main(){
 
 	for range 10{
 		fmt.Println(a)
-		a,b = b, a+b
+		a =  a+b
 	}
 }
