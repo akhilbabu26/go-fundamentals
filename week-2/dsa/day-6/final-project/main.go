@@ -122,7 +122,7 @@ func (s *Stack)Pop(){
 		fmt.Println("Empty Stack")
 		return
 	}
-	s.items = s.items[:s.top]
+	s.items = s.items[:len(s.items)-1]
 	s.top--
 }
 // stack peek
@@ -170,6 +170,10 @@ func (q *Queue)Dequeue()int{
 	}
 	val := q.front.data
 	q.front = q.front.next
+
+	if q.front == nil{
+		q.rear = nil
+	}
 	return val
 }
 // print queue
