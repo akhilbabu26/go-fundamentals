@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func insert(arr []int, index int, value int)[]int{
+	if index < 0 || index > len(arr) {
+		return arr
+	}
 	arr = append(arr, 0)
 
 	for i := len(arr)-1; i > index; i--{
